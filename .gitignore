@@ -1,0 +1,20 @@
+# Raw / processed network data -- large, and most of it is redistributable
+# only under the original databases' own terms. See data/README.md.
+data/raw/
+data/processed/
+
+# Simulation outputs
+results/*.csv
+!results/README.md
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+.venv/
+venv/
+
+# OS/editor
+.DS_Store
+.ipynb_checkpoints/

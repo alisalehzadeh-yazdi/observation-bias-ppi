@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below."
+title: "Observation bias in evolving protein interaction networks: analysis code"
+authors:
+  - family-names: Salehzadeh-Yazdi
+    given-names: Ali
+  - family-names: Tuncbag
+    given-names: Nurcan
+  - family-names: Gursoy
+    given-names: Attila
+  - family-names: Keskin
+    given-names: Ozlem
+  - family-names: Hütt
+    given-names: Marc-Thorsten
+preferred-citation:
+  type: article
+  title: "A quantitative analysis of observation biases in protein interaction networks"
+  authors:
+    - family-names: Salehzadeh-Yazdi
+      given-names: Ali
+    - family-names: Tuncbag
+      given-names: Nurcan
+    - family-names: Gursoy
+      given-names: Attila
+    - family-names: Keskin
+      given-names: Ozlem
+    - family-names: Hütt
+      given-names: Marc-Thorsten
+  # year / journal / volume / doi: fill in once the manuscript is accepted
