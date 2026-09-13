@@ -21,16 +21,4 @@ documents exactly what each script expects and where to get it.
    releases at a stable URL; STRING and BioGRID both version their FTP/HTTP
    download paths).
 2. Record the exact download URL and access date for each file in
-   `data/raw/<database>/SOURCES.md` (create one per database folder) — this
-   is what a reader will need to verify or refresh the dataset later, and
-   what a "Data Availability" statement in the manuscript should point to.
-3. If a file's raw format differs from STRING's `protein1 protein2
-   combined_score` layout (BioGRID, HIPPIE, and IntAct all do), add a
-   loader to `src/obsbias/network_io.py` following the pattern of
-   `load_string_network` — see the top-level README's "Additional data
-   needed" section, item 2.
-4. Do not commit raw files larger than GitHub's soft 50MB / hard 100MB
-   per-file limits; for large releases (BioGRID/IntAct full dumps can
-   exceed this) either keep them out of git entirely (as configured here)
-   or use Git LFS / an external archive (e.g., Zenodo) and link to it from
-   this file.
+   `data/raw/<database>/SOURCES.md` (create one per database folder).
