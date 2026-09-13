@@ -5,21 +5,6 @@ Raw database releases are **not** committed to this repository (see
 (BioGRID, IntAct) redistribution has its own license terms. This folder
 documents exactly what each script expects and where to get it.
 
-## Expected layout
-
-```
-data/
-  raw/
-    string/    Y4932.protein.physical.links.v9.1.txt ... v12.0.txt
-               9606.protein.physical.links.vX.Y.txt  (human)
-               <taxon>.protein.physical.links.vX.Y.txt (E. coli, Drosophila, mouse)
-    biogrid/   BIOGRID-ORGANISM-<Organism>-<version>.tab3.txt   (one per organism/version)
-    hippie/    hippie_v2.X.txt                                  (human only)
-    intact/    intact_<year>.txt (or the PSI-MI TAB export for the relevant release)
-  processed/
-    <database>_<organism>_v<version>.graphml   (optional cache of loaded/cleaned graphs)
-```
-
 ## Download sources
 
 | Database | Where | Versions used in the paper |
