@@ -12,6 +12,8 @@ authors:
     given-names: Ozlem
   - family-names: Hütt
     given-names: Marc-Thorsten
+license: MIT
+repository-code: "https://github.com/alisalehzadeh-yazdi/observation-bias-ppi"
 preferred-citation:
   type: article
   title: "A quantitative analysis of observation biases in protein interaction networks"
