@@ -29,13 +29,3 @@ models (its return value is then passed into `sample_new_edges` on every
 replicate), and by passing `node_scores=None` into `sample_new_edges` for
 RNBE on every replicate, which makes it draw a fresh attribute each time.
 `scripts/example_pipeline.py` shows this pattern end to end.
-
-## Verified vs. not-yet-implemented
-
-Everything in the table above is implemented and checked in
-`tests/test_models.py`. What this repository does **not** yet include: the
-publication-count / top-100-hub analysis behind Fig. S4, and the KEGG
-pathway enrichment analysis behind Fig. S5 and the main-text enrichment
-results. Those depend on external annotation resources (UniProt publication
-counts, KEGG pathway gene sets) this repository doesn't bundle; adding them
-here is a natural next step once the six-model pipeline above is finalized.
