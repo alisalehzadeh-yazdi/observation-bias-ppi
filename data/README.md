@@ -41,13 +41,3 @@ your own downloads before running the analysis.
    naming scheme) — `networkx.write_edgelist` / `networkx.read_edgelist`
    round-trip this format directly, matching the loading snippet in the
    top-level README.
-
-## Why raw dumps aren't committed here
-
-BioGRID, STRING, HIPPIE, and IntAct each publish their own reuse terms, and
-the raw files for the version range used in this study (five databases ×
-up to six versions × up to five organisms) are well beyond a size that
-belongs in a git repository. Pointing to the official, versioned source is
-also what keeps this reproducible if any of these databases changes its
-raw-file format in the future — the preprocessing step above is what
-absorbs that, rather than a stale binary blob.
