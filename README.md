@@ -15,24 +15,6 @@ edge-addition null/alternative models — RE, HCE, LCE, RNBE, RWE, CRWE (see
 Table 1 of the manuscript) — using a Jaccard-overlap-based, cross-database
 normalized bias score R_i(m).
 
-## Repository layout
-
-```
-src/
-  edge_addition_models.py   # the six models (Eq 5-11): weights + sampling
-  bias_score.py              # Delta E_i, Jaccard, R_i(m) (Eq 1-3)
-tests/
-  test_models.py              # self-contained correctness checks, no pytest needed
-scripts/
-  example_pipeline.py         # end-to-end demo on synthetic data (no downloads needed)
-data/
-  README.md                   # what to download, and from where, for each database
-results/
-  README.md                   # what a real run writes here
-docs/
-  methods_to_code_map.md       # equation-by-equation index into the code
-```
-
 ## Installation
 
 ```
@@ -94,24 +76,3 @@ See `data/README.md` for where each database version comes from, and
 (including how HCE/LCE/RWE/CRWE weights are precomputed once per
 transition and reused across runs, while RNBE's node attribute is redrawn
 every run, per the manuscript's Simulation Procedure).
-
-## Correctness
-
-Every equation this code implements (Eq 1–11 of the Methods) is checked in
-`tests/test_models.py`: each model returns exactly the required number of
-valid new edges; RE is verified not to be secretly degree-biased; HCE is
-verified to systematically favor higher-degree endpoints than LCE; the
-large-graph sampling scheme is checked against a closed-form theoretical
-marginal (needed because the ~27,000-node BioGRID human network makes
-enumerating the full candidate edge set impractical); and a full synthetic
-Eq (1)–(3) pipeline is checked to recover a planted preferential-attachment
-bias. Run `python3 tests/test_models.py` yourself — it prints a PASS line
-for every check.
-
-## Citation
-
-See `CITATION.cff`. If you use this code, please cite the paper above.
-
-## License
-
-MIT — see `LICENSE`.
